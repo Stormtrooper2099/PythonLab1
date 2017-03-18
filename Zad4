@@ -1,25 +1,20 @@
 # -*- coding: utf-8 -*-
 
-vvod_str = str(input('Vvedite stroku\n')).split(' ')
+text = input('Your text here -> ').split()
+tempText=[]
+for i in range(len(text)):
+    if len(text[i])>7:
+       tempText.append(text[i])
 
-print('Slova dlinnee 7 simvolov:\n')
+for i in range(len(text)):
+    if  4<len(text[i]) and len(text[i])<=7:
+       tempText.append(text[i])
 
-for i in vvod_str:
+for i in range(len(text)):
+    if len(text[i])<4:
+       tempText.append(text[i])  
 
-    if len(i) > 7:
 
-        print(vvod_str.pop(vvod_str.index(i)))
-
-print('Slova dlinnoyu ot 4 do 7 simvolov:\n')
-
-for i in vvod_str:
-
-    if (len(i)>= 4) and (len(i)<=7):
-
-        print(vvod_str.pop(vvod_str.index(i)))
-
-print('Slova menshe 4 simvolov:\n')
-
-for i in vvod_str:
-
-    print(i)
+tempText.sort(key=len,reverse=True)
+for i in range (len(tempText)):
+    print(tempText[i])
