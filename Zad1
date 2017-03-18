@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+
+try: 
+    
+    x=float(input("Enter number\n")) 
+
+    if x<0 :raise Exception 
+
+except Exception as e: 
+
+    print ("Wrong format!") 
+
+except ValueError as e: 
+
+    print("Wrong format!") 
+
+else: 
+
+    x*=100 
+
+    print ((x//100), "Rubley.", int(x%100), "Kopeek.")
