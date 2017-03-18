@@ -1,0 +1,11 @@
+# -*- coding: cp1251 -*-
+
+Vstr = (str(input('Введите строку: \n'))).split(' ')
+
+for i in range(len(Vstr)):
+
+    if ((Vstr[i])[0]).isupper():#Проверка на вверхний регистр
+
+        Vstr[i] = Vstr[i].upper()#Преобразование строки к верхнему регистру
+
+print(' '.join(Vstr)) #Сборка строки из списка с разделителем S
