@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+
+
+class Err(Exception):
+    pass
+
+while 1:
+    print('Enter credit card number (16 number)')
+    Num = input()
+    try:
+        intNum = int(Num)
+    except ValueError:
+        print('Enter number')
+    else:
+        try:
+            strNum = str(Num)
+            if len(strNum)!= 16:
+                raise Err
+        except Err:
+            print('Enter the 16 number')
+        else:
+            print('Number>> ',strNum[0:4],'*' * 12,strNum[11:15])
+            break
